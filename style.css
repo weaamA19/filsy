@@ -1,46 +1,114 @@
+
 body {
   font-family: 'Poppins', sans-serif;
-  background: linear-gradient(135deg, #ffafbd, #ffc3a0);
+  background: linear-gradient(135deg, #ff416c, #ff4b2b);
   color: #333;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
   margin: 0;
+  padding: 10px;
 }
+
 
 .container {
   background: white;
-  padding: 30px;
-  border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(255, 0, 100, 0.2);
+  padding: 40px 30px;
+  border-radius: 25px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
   text-align: center;
-  width: 400px;
+  width: 100%;
+  max-width: 450px;
+  transition: transform 0.3s ease;
+}
+
+.container:hover {
+  transform: translateY(-5px);
 }
 
 h1 {
-  color: #ff3b6a;
+  color: #ff0033;
+  font-size: 2.2em;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 1em;
+  color: #555;
+  margin-bottom: 25px;
+}
+
+
+input[type="file"] {
+  display: block;
+  margin: 0 auto 20px auto;
+  padding: 10px;
+  border-radius: 12px;
+  border: 1px solid #ff5f7e;
+  cursor: pointer;
+  width: 100%;
+  max-width: 300px;
 }
 
 button {
-  background-color: #ff5f7e;
+  background-color: #ff3366;
   color: white;
   border: none;
-  padding: 10px 20px;
-  margin-top: 15px;
-  border-radius: 10px;
+  padding: 12px 25px;
+  border-radius: 15px;
   cursor: pointer;
-  transition: 0.3s;
+  font-weight: 600;
+  font-size: 1em;
+  transition: all 0.3s ease;
+  margin-bottom: 20px;
 }
 
 button:hover {
-  background-color: #ff2d55;
+  background-color: #e60039;
+  transform: scale(1.05);
+}
+
+/* Status and result */
+#output {
+  text-align: left;
+  margin-top: 15px;
+}
+
+#loading {
+  display: block;
+  font-weight: 600;
+  color: #ff0033;
+  margin-bottom: 10px;
+  font-size: 1em;
 }
 
 pre {
-  text-align: left;
-  background: #fff0f5;
-  padding: 10px;
-  border-radius: 10px;
+  background: #ffe6eb;
+  padding: 15px;
+  border-radius: 15px;
   overflow-x: auto;
+  font-size: 0.95em;
+  line-height: 1.4em;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+/* Responsive */
+@media (max-width: 400px) {
+  .container {
+    padding: 30px 20px;
+  }
+
+  h1 {
+    font-size: 1.8em;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  input[type="file"] {
+    width: 100%;
+  }
 }

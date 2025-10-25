@@ -9,24 +9,23 @@ analyzeBtn.addEventListener("click", async () => {
   const file = receiptInput.files[0];
   if (!file) return alert("Please upload a receipt!");
 
-  loading.textContent = "Extracting text... ⏳";
+  loading.textContent = "Extracting text...";
 
   // OCR extraction client-side
   const { data: { text } } = await Tesseract.recognize(file, "eng");
-  console.log("Extracted text:", text);
 
-  loading.textContent = "Sending text to AI and saving... 🤖";
+  loading.textContent = "Sending text to AI and saving...";
 
   // Send the extracted text to Apps Script
-    const response = await fetch(APP_PROXY_URL, {
+  const response = await fetch(APP_PROXY_URL, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ text })
-    });
-
+  });
 
   const result = await response.json();
 
+  // Update the result and status in one div
   resultDiv.textContent = JSON.stringify(result.analysis, null, 2);
-  loading.textContent = "Done !";
+  loading.textContent = "Receipt was successfully appended";
 });
