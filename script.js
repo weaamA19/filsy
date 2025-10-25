@@ -3,7 +3,7 @@ const receiptInput = document.getElementById("receiptInput");
 const resultDiv = document.getElementById("result");
 const loading = document.getElementById("loading");
 
-const APP_PROXY_URL = "https://filsy.vercel.app/";
+const APP_PROXY_URL = "https://filsy.vercel.app/api/proxy";
 
 analyzeBtn.addEventListener("click", async () => {
   const file = receiptInput.files[0];
