@@ -1,7 +1,6 @@
-
 body {
   font-family: 'Poppins', sans-serif;
-  background: linear-gradient(135deg, #ff416c, #ff4b2b);
+  background: linear-gradient(135deg, #b18aff, #4b0082);
   color: #333;
   display: flex;
   justify-content: center;
@@ -10,7 +9,6 @@ body {
   margin: 0;
   padding: 10px;
 }
-
 
 .container {
   background: white;
@@ -28,7 +26,7 @@ body {
 }
 
 h1 {
-  color: #ff0033;
+  color: #6a0dad;
   font-size: 2.2em;
   margin-bottom: 10px;
 }
@@ -39,20 +37,19 @@ p {
   margin-bottom: 25px;
 }
 
-
 input[type="file"] {
   display: block;
   margin: 0 auto 20px auto;
   padding: 10px;
   border-radius: 12px;
-  border: 1px solid #ff5f7e;
+  border: 1px solid #b18aff;
   cursor: pointer;
   width: 100%;
   max-width: 300px;
 }
 
 button {
-  background-color: #ff3366;
+  background-color: #7b5fcf;
   color: white;
   border: none;
   padding: 12px 25px;
@@ -65,11 +62,10 @@ button {
 }
 
 button:hover {
-  background-color: #e60039;
+  background-color: #5a3cae;
   transform: scale(1.05);
 }
 
-/* Status and result */
 #output {
   text-align: left;
   margin-top: 15px;
@@ -78,13 +74,13 @@ button:hover {
 #loading {
   display: block;
   font-weight: 600;
-  color: #ff0033;
+  color: #6a0dad;
   margin-bottom: 10px;
   font-size: 1em;
 }
 
 pre {
-  background: #ffe6eb;
+  background: #f3e6ff;
   padding: 15px;
   border-radius: 15px;
   overflow-x: auto;
@@ -94,7 +90,6 @@ pre {
   word-wrap: break-word;
 }
 
-/* Responsive */
 @media (max-width: 400px) {
   .container {
     padding: 30px 20px;
