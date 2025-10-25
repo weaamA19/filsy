@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Filsy | Smart Money Tracker</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1> Filsy</h1>
+    <p> Upload your receipt and let AI do the rest!</p>
+
+    <input type="file" id="receiptInput" accept="image/*">
+    <button id="analyzeBtn">Submit</button>
+
+    <div id="output">
+      <p id="loading"></p>
+      <pre id="result"></pre>
+    </div>
+  </div>
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>
