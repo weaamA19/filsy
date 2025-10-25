@@ -11,12 +11,10 @@ analyzeBtn.addEventListener("click", async () => {
 
   loading.textContent = "Extracting text...";
 
-  // OCR extraction client-side
   const { data: { text } } = await Tesseract.recognize(file, "eng");
 
   loading.textContent = "Sending text to AI and saving...";
 
-  // Send the extracted text to Apps Script
   const response = await fetch(APP_PROXY_URL, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
@@ -25,7 +23,8 @@ analyzeBtn.addEventListener("click", async () => {
 
   const result = await response.json();
 
-  // Update the result and status in one div
   resultDiv.textContent = JSON.stringify(result.analysis, null, 2);
-  loading.textContent = "Receipt was successfully appended";
+  loading.textContent = "Receipt was successfully appended !";
+
+  receiptInput.value = "";
 });
