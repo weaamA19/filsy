@@ -13,6 +13,7 @@ analyzeBtn.addEventListener("click", async () => {
 
   // OCR extraction client-side
   const { data: { text } } = await Tesseract.recognize(file, "eng");
+  console.log("Extracted text:", text);
 
   loading.textContent = "Sending text to AI and saving... 🤖";
 
