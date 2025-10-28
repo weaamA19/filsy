@@ -142,9 +142,10 @@ pre {
 
 .modal-content textarea {
   width: 100%;
-  padding: 12px;
   border-radius: 10px;
   border: 1px solid #ccc;
+  box-sizing: border-box;
+  padding: 12px 16px;  
   resize: vertical;
   font-size: 0.9em;
   line-height: 1.4em;

@@ -23,7 +23,7 @@ analyzeBtn.addEventListener("click", async () => {
   // Show modal with recognize text for the user to confirm
   modal.style.display = "flex";
   modalText.value = text.trim();
-  modalText.removeAttribute("readonly");
+  modalText.setAttribute("readonly", true);
   loading.textContent = "";
 });
 
