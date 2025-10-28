@@ -69,6 +69,7 @@ button:hover {
 #output {
   text-align: left;
   margin-top: 15px;
+  display: none;
 }
 
 #loading {

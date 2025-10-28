@@ -43,6 +43,7 @@ confirmBtn.addEventListener("click", async () => {
     });
 
     const result = await response.json();
+    document.getElementById("output").style.display = "block";
     resultDiv.textContent = JSON.stringify(result.analysis, null, 2);
     loading.textContent = "Receipt successfully saved!";
   } catch (err) {
