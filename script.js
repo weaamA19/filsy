@@ -55,11 +55,20 @@ confirmBtn.addEventListener("click", async () => {
 });
 
 
+// editBtn.addEventListener("click", () => {
+//   modalText.removeAttribute("readonly");
+//   modalText.focus();
+// });
+
 editBtn.addEventListener("click", () => {
   modalText.removeAttribute("readonly");
+  modalText.readOnly = false;
   modalText.focus();
+  const length = modalText.value.length;
+  modalText.setSelectionRange(length, length);
+    modalText.style.backgroundColor = "#fff"; 
+  modalText.style.border = "2px solid #007bff";
 });
-
 
 closeBtn.addEventListener("click", () => {
   modal.style.display = "none";
